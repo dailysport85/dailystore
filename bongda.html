@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Daily store</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Arial", sans-serif;
+      background: url("https://res.cloudinary.com/du17geywu/image/upload/v1764254326/2_i9b6wz.jpg") no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      text-align: center;
+      min-height: 100vh;
+      position: relative;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.45);
+      z-index: -1;
+    }
+
+    /* TikTok follow button góc trên bên trái */
+    .tiktok-follow {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 22px;
+      background: #fe2c55;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: 0.3s;
+      z-index: 10;
+    }
+    .tiktok-follow:hover { background: #e0264a; }
+    .tiktok-follow img { width: 28px; height: 28px; }
+
+    .container {
+      max-width: 720px;
+      margin: auto;
+      padding: 120px 20px 40px 20px; /* padding-top đủ để nút và logo không chồng */
+    }
+
+    /* Logo trên cùng */
+    .logo-top {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    /* Slogan chuyên nghiệp */
+    .slogan {
+      margin: 10px 0 25px 0;
+      font-size: 18px;
+      font-weight: bold;
+      color: #ffd700; /* vàng sang trọng */
+      text-shadow: 0 0 8px rgba(255,215,0,0.7), 0 0 16px rgba(255,215,0,0.5);
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 4px rgba(255,215,0,0.5), 0 0 8px rgba(255,215,0,0.3); }
+      to { text-shadow: 0 0 10px rgba(255,215,0,1), 0 0 20px rgba(255,215,0,0.7); }
+    }
+
+    h1 { margin: 10px 0 5px; font-size: 28px; color: #fff; }
+    .section-title { font-size: 18px; margin: 20px 0; color: #fff; font-weight: bold; }
+
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+    .menu-item {
+      background: rgba(255,255,255,0.95);
+      border-radius: 15px;
+      padding: 12px;
+      text-decoration: none;
+      color: #333;
+      transition: 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .menu-item:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+
+    /* ✅ FIX ẢNH HIỂN THỊ ĐẦY ĐỦ (chỉ sửa phần này) */
+    .menu-item img {
+      width: 100%;
+      height: 140px;
+      border-radius: 12px;
+      object-fit: contain;   /* sửa từ cover -> contain */
+      background: #fff;      /* thêm nền để ảnh không bị khoảng trống xấu */
+    }
+
+    .menu-item h3 { margin: 8px 0; font-size: 16px; color: #111; }
+
+    @media (max-width: 720px) {
+      .menu { grid-template-columns: 1fr; }
+      .menu-item img { height: 180px; }
+      .logo-top { width: 100px; height: 100px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Nút Follow TikTok góc trên bên trái -->
+  <a class="tiktok-follow" href="https://www.tiktok.com/@daily.sports85?is_from_webapp=1&sender_device=pc" target="_blank">
+    <img src="https://res.cloudinary.com/du17geywu/image/upload/v1763881075/avatar_qpwuvi.jpg" alt="TikTok">
+    Follow TikTok
+  </a>
+
+  <div class="container">
+    <!-- Logo trên cùng -->
+    <img class="logo-top" src="https://res.cloudinary.com/du17geywu/image/upload/v1763881075/avatar_qpwuvi.jpg" alt="Logo/Avatar">
+
+    <h1>Daily store</h1>
+    <div class="section-title">🔥 Các sản phẩm hot hit cập nhật liên tục 🔥</div>
+
+    <div class="menu">
+      <!-- 3 mục cũ -->
+      <a class="menu-item" href="gallery-aobongda.html">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764410693/z26_yyiqdj.webp" alt="Áo đá bóng">
+        <h3>Áo đá bóng</h3>
+      </a>
+      <a class="menu-item" href="gallery-giay.html">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764506116/114_revuip.webp" alt="Giày đá bóng">
+        <h3>Giày đá bóng</h3>
+    </div>
+  </div>
+</body>
+</html>
