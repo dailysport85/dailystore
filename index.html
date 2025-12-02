@@ -25,7 +25,6 @@
       z-index: -1;
     }
 
-    /* TikTok follow button góc trên bên trái */
     .tiktok-follow {
       position: fixed;
       top: 20px;
@@ -49,10 +48,9 @@
     .container {
       max-width: 720px;
       margin: auto;
-      padding: 120px 20px 40px 20px; /* padding-top đủ để nút và logo không chồng */
+      padding: 120px 20px 40px 20px;
     }
 
-    /* Logo trên cùng */
     .logo-top {
       width: 120px;
       height: 120px;
@@ -60,21 +58,6 @@
       margin-bottom: 15px;
       object-fit: cover;
       box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    }
-
-    /* Slogan chuyên nghiệp */
-    .slogan {
-      margin: 10px 0 25px 0;
-      font-size: 18px;
-      font-weight: bold;
-      color: #ffd700; /* vàng sang trọng */
-      text-shadow: 0 0 8px rgba(255,215,0,0.7), 0 0 16px rgba(255,215,0,0.5);
-      animation: glow 2s ease-in-out infinite alternate;
-    }
-
-    @keyframes glow {
-      from { text-shadow: 0 0 4px rgba(255,215,0,0.5), 0 0 8px rgba(255,215,0,0.3); }
-      to { text-shadow: 0 0 10px rgba(255,215,0,1), 0 0 20px rgba(255,215,0,0.7); }
     }
 
     h1 { margin: 10px 0 5px; font-size: 28px; color: #fff; }
@@ -92,7 +75,6 @@
       padding: 12px;
       text-decoration: none;
       color: #333;
-      transition: 0.3s;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -100,15 +82,13 @@
       gap: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
-    .menu-item:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
 
-    /* ✅ FIX ẢNH HIỂN THỊ ĐẦY ĐỦ (chỉ sửa phần này) */
     .menu-item img {
       width: 100%;
       height: 140px;
       border-radius: 12px;
-      object-fit: contain;   /* sửa từ cover -> contain */
-      background: #fff;      /* thêm nền để ảnh không bị khoảng trống xấu */
+      object-fit: contain;
+      background: #fff;
     }
 
     .menu-item h3 { margin: 8px 0; font-size: 16px; color: #111; }
@@ -121,31 +101,48 @@
   </style>
 </head>
 <body>
-  <!-- Nút Follow TikTok góc trên bên trái -->
+
   <a class="tiktok-follow" href="https://www.tiktok.com/@daily.sports85?is_from_webapp=1&sender_device=pc" target="_blank">
-    <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764511210/0_wwc9ym.png" alt="TikTok">
+    <img src="https://res.cloudinary.com/du17geywu/image/upload/v1763881075/avatar_qpwuvi.jpg" alt="TikTok">
     Follow TikTok
   </a>
 
   <div class="container">
-    <!-- Logo trên cùng -->
+
     <img class="logo-top" src="https://res.cloudinary.com/du17geywu/image/upload/v1764511210/0_wwc9ym.png" alt="Logo/Avatar">
 
     <h1>Daily store</h1>
-    <div class="section-title">🔥 Các sản phẩm hot hit cập nhật liên tục 🔥</div>
+
+    <div class="section-title">🔥 Bùng cháy với đam mê 🔥</div>
+
+    <!-- ❌ Dòng chữ hướng dẫn đã bị xóa -->
 
     <div class="menu">
-      <!-- 3 mục cũ -->
-      <a class="menu-item" href="gallery-aobongda.html">
-        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764410693/z26_yyiqdj.webp" alt="Áo đá bóng">
-        <h3>Áo đá bóng</h3>
-      </a>
-      <a class="menu-item" href="gallery-giay.html">
-        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764506116/114_revuip.webp" alt="Giày đá bóng">
-        <h3>Giày đá bóng</h3>
+
+      <div class="menu-item">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764661029/y-nghia-logo-tren-ao-bong-anh-bia_iwcpzc.jpg" alt="Các mẫu áo đá bóng">
+        <h3>Các mẫu áo đá bóng</h3>
+        <a href="gallery-aobongda.html"
+           style="padding:10px 15px; background:#ffd700; color:#000; font-weight:bold; text-decoration:none;
+                  border-radius:10px; display:inline-block; margin-top:5px; box-shadow:0 3px 8px rgba(0,0,0,0.2);
+                  transition:0.3s;">
+          Xem ngay
+        </a>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764661031/giay-da-bong-nike_kwojxz.jpg" alt=" Các mẫu giày đá bóng">
+        <h3>  Các mẫu giày đá bóng</h3>
+        <a href="gallery-giay.html"
+           style="padding:10px 15px; background:#ffd700; color:#000; font-weight:bold; text-decoration:none;
+                  border-radius:10px; display:inline-block; margin-top:5px; box-shadow:0 3px 8px rgba(0,0,0,0.2);
+                  transition:0.3s;">
+          Xem ngay
+        </a>
+      </div>
+
     </div>
+
   </div>
 </body>
 </html>
-
-
