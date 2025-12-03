@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Quần Áo Bóng Đá -Daily store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url("https://res.cloudinary.com/du17geywu/image/upload/v1764254326/2_i9b6wz.jpg") no-repeat center/cover;
+      background-attachment: fixed;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    header {
+      background: rgba(51,51,51,0.9);
+      color: white;
+      padding: 15px 20px;
+      font-size: 22px;
+      font-weight: bold;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .back-header {
+      background: #555;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    /* ⭐ MỤC BÁN CHẠY */
+    .hot-section {
+      margin: 30px auto;
+      padding: 20px;
+      max-width: 900px;
+      background: rgba(255, 215, 0, 0.18);
+      border: 2px solid gold;
+      border-radius: 16px;
+      box-shadow: 0 0 25px gold;
+      text-align: center;
+    }
+
+    .hot-title {
+      font-size: 28px;
+      font-weight: 900;
+      color: #ffe066;
+      text-shadow: 0 0 10px #000;
+      margin-bottom: 20px;
+    }
+
+    .hot-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .hot-box img {
+      width: 100%;
+      border-radius: 14px;
+      background: #fff;
+      padding: 5px;
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+    }
+
+    .hot-buy {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 32px;
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+      background: linear-gradient(90deg, #ff1e46, #ff7b00);
+      text-decoration: none;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+    }
+
+    /* ⚡ BỐ CỤC 4 CẶP 1 HÀNG */
+    .row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); 
+      gap: 40px;
+      margin: 30px auto;
+      max-width: 1400px;
+    }
+
+    .pair {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .product-name {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #ffffff;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    }
+
+    .pair .img-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      width: 100%;
+    }
+
+    .pair img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      border-radius: 12px;
+      background: #fff;
+      padding: 5px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .buy-box {
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 40px;
+    }
+
+    .buy-link {
+      display: inline-block;
+      background: #fe2c55;
+      color: white;
+      padding: 12px 26px;
+      border-radius: 10px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 17px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
+
+    .back-bottom {
+      display: inline-block;
+      background: #555;
+      color: white;
+      padding: 14px 26px;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+      margin: 50px auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    /* ⚡ DÀNH CHO ĐIỆN THOẠI */
+    @media (max-width: 768px) {
+      .row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+      .hot-box {
+        grid-template-columns: 1fr;
+      }
+    }
+.follow-tiktok-box {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 9999;
+  background: rgba(0,0,0,0.4);
+  padding: 10px 16px;
+  border-radius: 14px;
+  backdrop-filter: blur(8px);
+}
+
+.follow-tiktok-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid #fe2c55;
+  object-fit: cover;
+}
+
+.follow-tiktok-btn {
+  background: #fe2c55;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.follow-tiktok-btn:hover {
+  opacity: 0.85;
+}
+
+  </style>
+</head>
+<body>
+
+<div class="follow-tiktok-box">
+  <img class="follow-tiktok-avatar" src="https://res.cloudinary.com/du17geywu/image/upload/v1764511210/0_wwc9ym.png" alt="avatar">
+  
+  <a class="follow-tiktok-btn" href="https://www.tiktok.com/@daily.sports85?is_from_webapp=1&sender_device=pc" target="_blank">
+    ⭐ Follow TikTok
+  </a>
+</div>
+
+
+<header>
+  <div>Quần Áo Bóng Đá -Daily store</div>
+  <a class="back-header"  href="index.html">⬅️ Quay lại trang chính</a>
+</header>
+
+<div id="gallery">
+  <div class="row">
+
+    <div class="pair">
+      <div class="product-name">CLB MU 2025/2026</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764253495/x1_lpel8d.webp">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764253494/x2_jypwtc.jpg">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/AA9fgVppAC" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+    <div class="pair">
+      <div class="product-name"> CLB MU 2025/2026</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764253493/x3_csr7rr.webp">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764253493/x4_ddstwr.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/AA9fgVppAC" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+    <div class="pair">
+      <div class="product-name"> CLB MU 2025/2026</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764253492/x5_uracc2.jpg">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764253495/x6_w5vqlp.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/AA9fgVppAC" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+    <div class="pair">
+      <div class="product-name"> Liver 2025</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764255394/x7_fa5pww.webp">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764255398/x8_uzlv23.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/5VNqA1HYeG" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+    <div class="pair">
+      <div class="product-name"> Liver 2025</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764255396/x9_hnqykn.webp">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764255397/x10_v3mpfw.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/5VNqA1HYeG" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+    <div class="pair">
+      <div class="product-name">Liver 2025</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764255398/x11_rspjtf.webp">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764255407/x12_gjguxn.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/5VNqA1HYeG" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+  <div class="pair">
+      <div class="product-name"> Đức 2024/2025</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764411088/z28_dk0pjv.webp">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764411089/z29_ggf48t.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/3VcoePVVlK" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+ <div class="pair">
+      <div class="product-name"> Đức 2024/2025</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764411240/a27_embura.webp">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764411241/a28_opj8zs.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/3fwEqx2gJV" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+ <div class="pair">
+      <div class="product-name"> Tây Ban Nha 2024/2025</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764411656/a29_avgmpf.webp">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764411653/a30_abambr.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/AUmYzqYW1t" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+<div class="pair">
+      <div class="product-name">  Đội Tuyển VN Đỏ</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764411840/a31_zzf96l.webp">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764411844/a32_wovyo7.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/qc3UN6a94" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+<div class="pair">
+      <div class="product-name">   Nhật xanh lửa 2024/2025</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764412054/a33_herwhj.webp">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764412053/a34_qdex5e.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/3LJOT9RXn7" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+<div class="pair">
+      <div class="product-name">  Hà lan xanh 2024/2025</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764414851/a36_oxxcl4.webp">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764414852/a35_cve3jq.jpg">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/10vTkHGeFo" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+<div class="pair">
+      <div class="product-name"> Tuyển Anh đen xanh</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764415250/a38_ewc5wi.webp">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764415250/a37_v9b6dm.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/3fwEvTqVGL" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+<div class="pair">
+      <div class="product-name">  tuyển Argentina 2022</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764415446/a39_s7imuq.webp">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764415450/a40_qd3jsz.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/qc3YWuHCW" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+<div class="pair">
+      <div class="product-name">  Brazil vàng</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764415936/41_adh3o7.webp">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764415937/42_ldispn.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/2B7R9LsyIv" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+<div class="pair">
+      <div class="product-name">   Tuyển Đức Màu Trắng Thun</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764416167/43_pfsfis.webp">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764416166/44_gk2hxc.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/AKT8smrJuJ" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+ 
+<div class="pair">
+      <div class="product-name">  clb Inter Miami hồng</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764416535/45_png7gz.webp">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764416530/46_zxlcox.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/1LYKAav6qQ" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+<div class="pair">
+      <div class="product-name">  clb Barcelona sọc</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764416670/47_zmrrpo.webp">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764416671/48_tsyiwu.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/9KabhYJdnY" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+<div class="pair">
+      <div class="product-name">  đội tuyển anh trắng</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764416860/49_nqvkks.webp">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764416860/49_nqvkks.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/4fom9BjM2K" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+<div class="pair">
+      <div class="product-name">   CLB Real Madrid hồng</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764417072/51_wfaclj.webp">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764417062/50_bhl9zo.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/40Z5M8HbJE" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+<div class="pair">
+      <div class="product-name">  Tuyển BỒ ĐÀO NHA MÀU KEM </div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764417176/52_uamskc.webp">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764417176/52_uamskc.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/8AOeJvBIGE" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+<div class="pair">
+      <div class="product-name">  Đội Tuyển BACA MÀU KEM </div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764417380/54_rrmfor.webp">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764417379/53_fu9rdt.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/10vTn58ETL" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+<div class="pair">
+      <div class="product-name"> đội tuyển Việt Nam trắng</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764463892/55_k8vxlv.webp">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764463892/56_etgnwb.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/805EzDFvND" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+<div class="pair">
+      <div class="product-name">  đội tuyển Ý trắng  2024/2025 </div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764464755/57_q00maz.webp">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764464756/58_iovh1j.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/8fKvnTvvfx" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+<div class="pair">
+      <div class="product-name"> Tuyển Pháp áo Than quần than, trắng </div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764465184/59_rhfaeb.webp">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764465187/60_nrvqjz.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/2LQsGFs90S" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+<div class="pair">
+      <div class="product-name"> đội tuyển Ý xanh </div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764465565/61_rkqely.webp">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764465653/62_s3aqke.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/2qN8rYtkGb" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+<div class="pair">
+      <div class="product-name">  đội tuyển Argentina trắng xanh </div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764465862/64_atw1hp.jpg">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764465862/63_ljckzu.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/9zqJPBPx2O" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+<div class="pair">
+      <div class="product-name">Đội Tuyển ITALYA năm 2000 </div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764466164/65_hfq1mg.webp">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764466125/66_n0ybmt.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/805F1oGstM" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+<div class="pair">
+      <div class="product-name">đội tuyển Argentina rồng họa tiết </div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764467132/68_zxrwto.webp">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764467133/67_lijcfr.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/40Z6Het9c0" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+<div class="pair">
+      <div class="product-name">Đội Tuyển Đức Trắng 2026  </div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764467393/69_g8dpbc.webp">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764467394/70_pqgsfn.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/20o1uAmhzl" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+<div class="pair">
+      <div class="product-name">đội tuyển đức 2024  </div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764467567/72_srsfqo.webp">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764467567/71_etpqaq.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/6Adas0tUNe" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+<div class="pair">
+      <div class="product-name">Đội Tuyển Bồ Đào Nha Đỏ  </div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764467825/75_jhphji.jpg">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764467825/76_l2eu7t.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/6VGRGvKDPJ" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+  <div class="pair">
+      <div class="product-name">Đội Tuyển Bồ Đào Nha trắng xanh  </div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764467825/78_qvxltu.webp">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764467827/77_wqsxnp.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/6VGRGvKDPJ" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+ <div class="pair">
+      <div class="product-name"> Đội Tuyển Italia WC 1994   </div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764468417/80_khkvjg.webp">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764468431/79_p7nmuq.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/5L4TtMn5rM" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+ <div class="pair">
+      <div class="product-name"> đội tuyển Brazil xanh 2026   </div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764468836/81_oqql6d.webp">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764468838/82_qmn6qb.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/7AW851d6Zz" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+
+</div>
+
+<a class="back-bottom" href="index.html">⬅️ Quay lại trang chính</a>
+
+</body>
+</html>

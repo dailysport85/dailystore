@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Quần Áo Bóng Đá -Daily store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url("https://res.cloudinary.com/du17geywu/image/upload/v1764254326/2_i9b6wz.jpg") no-repeat center/cover;
+      background-attachment: fixed;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    header {
+      background: rgba(51,51,51,0.9);
+      color: white;
+      padding: 15px 20px;
+      font-size: 22px;
+      font-weight: bold;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .back-header {
+      background: #555;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    /* ⭐ BỐ TRÍ SẢN PHẨM ĐỀU HÀNG */
+    .row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 35px;
+      margin: 30px auto;
+      max-width: 1400px;
+    }
+
+    .pair {
+      width: 100%;
+      background: rgba(0,0,0,0.30);
+      padding: 15px;
+      border-radius: 14px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+
+      /* GIÚP CÁC CỘT CÂN ĐỀU CHIỀU CAO */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .product-name {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #ffffff;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    }
+
+    .img-box {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .pair img {
+      width: 100%;
+      height: 240px;
+      object-fit: contain;
+      border-radius: 12px;
+      background: #fff;
+      padding: 5px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
+
+    .buy-box {
+      margin-top: auto;
+      text-align: center;
+    }
+
+    .buy-link {
+      display: inline-block;
+      background: #fe2c55;
+      color: white;
+      padding: 12px 26px;
+      border-radius: 10px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 17px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
+
+    .back-bottom {
+      display: inline-block;
+      background: #555;
+      color: white;
+      padding: 14px 26px;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+      margin: 50px auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    /* 📱 Mobile */
+    @media (max-width: 768px) {
+      .row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+      .pair img {
+        height: 180px;
+      }
+    }
+.follow-tiktok-box {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 9999;
+  background: rgba(0,0,0,0.4);
+  padding: 10px 16px;
+  border-radius: 14px;
+  backdrop-filter: blur(8px);
+}
+
+.follow-tiktok-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid #fe2c55;
+  object-fit: cover;
+}
+
+.follow-tiktok-btn {
+  background: #fe2c55;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.follow-tiktok-btn:hover {
+  opacity: 0.85;
+}
+
+  </style>
+</head>
+<body>
+<div class="follow-tiktok-box">
+  <img class="follow-tiktok-avatar" src="https://res.cloudinary.com/du17geywu/image/upload/v1764511210/0_wwc9ym.png" alt="avatar">
+  
+  <a class="follow-tiktok-btn" href="https://www.tiktok.com/@daily.sports85?is_from_webapp=1&sender_device=pc" target="_blank">
+    ⭐ Follow TikTok
+  </a>
+</div>
+
+<header>
+  <div>Quần Áo Bóng Đá -Daily store</div>
+  <a class="back-header" href="index.html">⬅️ Quay lại trang chính</a>
+</header>
+
+<div id="gallery">
+  <div class="row">
+
+    <!-- TỪ ĐÂY TRỞ XUỐNG MÌNH ĐÃ SỬA LỖI ">>" -->
+
+    <div class="pair">
+      <div class="product-name">Bóng Fussballliebe</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764679706/29_y96c3u.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/4q8HJgh7yt" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+    <div class="pair">
+      <div class="product-name">Bóng Trionda</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764686220/10_vxofbp.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/4q8HJgh7yt" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+    <div class="pair">
+      <div class="product-name">Bóng Finale 25</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764679706/31_qfjg1x.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/4q8HJgh7yt" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+    <div class="pair">
+      <div class="product-name">Bóng Finale Istanbul tím</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764686522/9_apg8fo.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/4q8HJgh7yt" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+    <div class="pair">
+      <div class="product-name">Bóng Finale 26</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764686584/8_ufalez.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/4q8HJgh7yt" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+    <div class="pair">
+      <div class="product-name">Bóng V32</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764686674/7_mbv062.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/4q8HJgh7yt" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+    <div class="pair">
+      <div class="product-name">Bóng WC MAY</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764686709/6_qunc4w.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/4q8HJgh7yt" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+
+    <div class="pair">
+      <div class="product-name">Bóng Ngoại Hạng 2023 trắng</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764679872/25_cog1i3.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/2g3mkYLeHF" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+    <div class="pair">
+      <div class="product-name">Bóng Ngoại Hạng 2023 vàng</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764679873/26_pqjl29.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/2g3mkYLeHF" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+    <div class="pair">
+      <div class="product-name">Bóng Ngoại Hạng 2024 cam</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764686976/5_vtglml.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/2g3mkYLeHF" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+    <div class="pair">
+      <div class="product-name">Bóng Ngoại Hạng 21/22</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764679875/27_evkfqg.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/2g3mkYLeHF" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+
+    <div class="pair">
+      <div class="product-name">Bóng Ngoại Hạng 24/25 xanh</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764687094/4_ctl4gv.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/2g3mkYLeHF" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+
+    <div class="pair">
+      <div class="product-name">Bóng BHT PALEDAS</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764687211/3_ilwn6u.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/2g3mkYLeHF" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+    <div class="pair">
+      <div class="product-name">Bóng WC 22</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764687465/11_iwu1f1.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/50RhXGsiSe" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+
+    <div class="pair">
+      <div class="product-name">Bóng EURO 2020</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764687465/12_ab0ldo.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/50RhXGsiSe" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+
+    <div class="pair">
+      <div class="product-name">Bóng UEFA Sao vàng</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764687466/13_wauidt.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/50RhXGsiSe" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+
+    <div class="pair">
+      <div class="product-name">Bóng UCLPRO 23/24</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764687660/2_kjyntn.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/50RhXGsiSe" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+    <div class="pair">
+      <div class="product-name">Bóng UEFA Sao xanh</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764687467/14_imejik.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/50RhXGsiSe" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+
+    <div class="pair">
+      <div class="product-name">Bóng UEFA Sao đỏ</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764687471/15_lsm6g0.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/50RhXGsiSe" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+
+    <div class="pair">
+      <div class="product-name">Bóng UEFA đen trắng</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764687471/16_ebuphb.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/50RhXGsiSe" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+
+    <div class="pair">
+      <div class="product-name">Bóng WC 2022</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764687478/19_a1tawi.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/50RhXGsiSe" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+    <div class="pair">
+      <div class="product-name">Bóng EPL sao Colo</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764687480/20_mjv2vi.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/50RhXGsiSe" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+    <div class="pair">
+      <div class="product-name">Bóng FAS 1000</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764687486/24_cksqgx.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/50RhXGsiSe" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+    <div class="pair">
+      <div class="product-name">Bóng UCL 24/25</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764687485/23_goa7ax.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/50RhXGsiSe" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+    <div class="pair">
+      <div class="product-name">Bóng FIFA</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764687483/22_zzemya.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/50RhXGsiSe" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+    <div class="pair">
+      <div class="product-name">Bóng EPL 24/25</div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/du17geywu/image/upload/v1764687481/21_ywjhvj.webp">
+      </div>
+      <div class="buy-box">
+        <a class="buy-link" href="https://s.shopee.vn/50RhXGsiSe" target="_blank">Mua sản phẩm ở đây</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<a class="back-bottom" href="index.html">⬅️ Quay lại trang chính</a>
+
+</body>
+</html>
